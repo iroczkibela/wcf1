@@ -67,9 +67,11 @@
     </Content>
     <Content Include="Service1.svc" />
     <Content Include="Web.config" />
+    <Content Include="ZeneszamAdatok.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\EloadoController.cs" />
+    <Compile Include="Controllers\ZeneszamController.cs" />
     <Compile Include="Models\Eloado.cs" />
     <Compile Include="Models\Zeneszam.cs" />
     <Compile Include="Service1.svc.cs">
