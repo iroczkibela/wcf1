@@ -11,7 +11,7 @@ namespace WCF_elso_server.Controllers
     {
         public List<Eloado> ELoadokLista()
         {
-            string[] sorok = File.ReadAllLines("C:\\Users\\Admin\\Documents\\Suli\\Órákra_Backend\\13B\\02alkalom\\WCF_elso\\WCF_elso_server\\EloadoAdatok.txt");
+            string[] sorok = File.ReadAllLines("C:\\Users\\Béci\\Desktop\\backend\\WCF_elso\\WCF_elso_server\\EloadoAdatok.txt");
             List<Eloado> list = new List<Eloado>();
             for (int i = 1; i < sorok.Length; i++)
             {
@@ -27,7 +27,7 @@ namespace WCF_elso_server.Controllers
         public string InsertEloado(Eloado ujEloado)
         {
             ujEloado.EloadoAz = GenerateID();
-            StreamWriter kimenet = new StreamWriter("C:\\Users\\Admin\\Documents\\Suli\\Órákra_Backend\\13B\\02alkalom\\WCF_elso\\WCF_elso_server\\EloadoAdatok.txt", true);
+            StreamWriter kimenet = new StreamWriter("C:\\Users\\Béci\\Desktop\\backend\\WCF_elso\\WCF_elso_server\\EloadoAdatok.txt", true);
             
             kimenet.WriteLine(ujEloado.ToString());
             kimenet.Close();
@@ -55,7 +55,7 @@ namespace WCF_elso_server.Controllers
             {   //Ha találok, módosítom a listát
                 aktualis[index].EloadoName = eloado.EloadoName;
                 //A módosított lista alapján újragenerálom az állományt
-                StreamWriter ujAllomany = new StreamWriter("C:\\Users\\Admin\\Documents\\Suli\\Órákra_Backend\\13B\\02alkalom\\WCF_elso\\WCF_elso_server\\EloadoAdatok.txt");
+                StreamWriter ujAllomany = new StreamWriter("C:\\Users\\Béci\\Desktop\\backend\\WCF_elso\\WCF_elso_server\\EloadoAdatok.txt");
                 ujAllomany.WriteLine("eloadoAzon;elodoNev");
                 foreach (Eloado a in aktualis)
                 {
@@ -86,7 +86,7 @@ namespace WCF_elso_server.Controllers
             {   //Ha találok, törlöm a listából az elemet
                 
                 //A módosított lista alapján újragenerálom az állományt
-                StreamWriter ujAllomany = new StreamWriter("C:\\Users\\Admin\\Documents\\Suli\\Órákra_Backend\\13B\\02alkalom\\WCF_elso\\WCF_elso_server\\EloadoAdatok.txt");
+                StreamWriter ujAllomany = new StreamWriter("C:\\Users\\Béci\\Desktop\\backend\\WCF_elso\\WCF_elso_server\\EloadoAdatok.txt");
                 ujAllomany.WriteLine("eloadoAzon;elodoNev");
                 foreach (Eloado a in aktualis)
                 {
@@ -99,6 +99,8 @@ namespace WCF_elso_server.Controllers
             else
                 //Ha nem találom, üzenem, hogy nincs ilyen
                 return "Nincs ilyen azonosítójú előadó";
+
+            Console.ReadKey();
         }
     }
 }
