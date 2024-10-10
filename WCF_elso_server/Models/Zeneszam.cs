@@ -15,5 +15,10 @@ namespace WCF_elso_server.Models
         public string ZeneszamCim { get; set; }
         [DataMember]
         public int ZeneszamHossz { get; set; }
+
+        public override string ToString()
+        {
+            return $"{ZeneszamAz};{ZeneszamCim};{ZeneszamHossz}";
+        }
     }
 }

@@ -55,5 +55,22 @@ namespace WCF_elso_server
         {
             return "";
         }
+
+        public string ModositZeneszam(Zeneszam zeneszam)
+        {
+            return new ZeneszamController().UpdateZeneszam(zeneszam);
+        }
+
+        public string UjZeneszam(Zeneszam zeneszam)
+        {
+            return new ZeneszamController().InsertZeneszam(zeneszam);
+
+        }
+        public string TorolZeneszam(int id)
+        {
+            return "";
+        }
+
+        
     }
 }

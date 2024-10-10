@@ -32,5 +32,12 @@ namespace WCF_elso_server
         [OperationContract]
         Zeneszam GetZeneszam();
 
+        [OperationContract]
+        string UjZeneszam(Zeneszam zeneszam);
+        [OperationContract]
+        string ModositZeneszam(Zeneszam zeneszam);
+        [OperationContract]
+        string TorolZeneszam(int id);
+
     }
 }

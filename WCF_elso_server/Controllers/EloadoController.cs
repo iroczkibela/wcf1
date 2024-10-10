@@ -100,7 +100,7 @@ namespace WCF_elso_server.Controllers
                 //Ha nem találom, üzenem, hogy nincs ilyen
                 return "Nincs ilyen azonosítójú előadó";
 
-            Console.ReadKey();
+            
         }
     }
 }
